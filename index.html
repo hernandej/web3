@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SENDA HOGAR</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        body {
+            display: grid;
+            grid-template-areas:
+                "header header header"
+                "menu contenido publicidad";
+            grid-template-columns: 200px 1fr 200px;
+            grid-template-rows: 100px 1fr;
+            min-height: 100vh;
+            background-color: #f5f5f5;
+        }
+        
+        /* Encabezado */
+        #encabezado {
+            grid-area: header;
+            background-color: #2c3e50;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        
+        #encabezado h1 {
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+        }
+        
+        /* Menú */
+        #menu {
+            grid-area: menu;
+            background-color: #34495e;
+            color: white;
+            padding: 20px 0;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+        }
+        
+        #menu ul {
+            list-style: none;
+        }
+        
+        #menu li {
+            padding: 12px 20px;
+            border-bottom: 1px solid #46637f;
+            transition: background-color 0.3s;
+        }
+        
+        #menu li:hover {
+            background-color: #46637f;
+            cursor: pointer;
+        }
+        
+        #menu a {
+            color: white;
+            text-decoration: none;
+            display: block;
+        }
+        
+        /* Contenido */
+        #contenido {
+            grid-area: contenido;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        
+        #contenido h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #3498db;
+        }
+        
+        #contenido p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        /* Secciones de contenido */
+        #contenido section {
+            margin-bottom: 30px;
+        }
+        
+        /* Publicidad */
+        #publicidad {
+            grid-area: publicidad;
+            background-color: #ecf0f1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+        }
+        
+        .publi-box {
+            width: 160px;
+            height: 200px;
+            background-color: #3498db;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            border-radius: 5px;
+        }
+        
+        /* Redes sociales */
+        .redes-sociales {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .red-social {
+            width: 40px;
+            height: 40px;
+            background-color: #2c3e50;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        
+        /* Contacto */
+        .contacto {
+            margin-top: 30px;
+            text-align: center;
+        }
+        
+        .contacto h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .contacto p {
+            font-weight: bold;
+        }
+        
+        /* Footer */
+
+
+        footer {
+            grid-column: 1 / span 3;
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                grid-template-areas:
+                    "header"
+                    "menu"
+                    "contenido"
+                    "publicidad";
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Encabezado -->
+    <header id="encabezado">
+        <h1>SENDA HOGAR</h1>
+    </header>
+    
+    <!-- Menú izquierdo -->
+    <nav id="menu">
+        <ul>
+            <li><a href="#quienes-somos">Quienes somos</a></li>
+            <li><a href="#departamentos-renta">Departamentos en renta</a></li>
+            <li><a href="#departamentos-venta">Departamentos en venta</a></li>
+            <li><a href="#casas-renta">Casas en renta</a></li>
+            <li><a href="#casas-venta">Casas en venta</a></li>
+            <li><a href="#bodegas">Bodegas</a></li>
+            <li><a href="#fincas">Fincas</a></li>
+            <li><a href="#locales">Locales</a></li>
+            <li><a href="#otros">Otros</a></li>
+            <li><a href="#contacto">Contáctanos</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Contenido principal -->
+    <main id="contenido">
+        <section id="quienes-somos">
+            <h2>Quiénes Somos</h2>
+            <p>SENDA HOGAR es una empresa dedicada a facilitar el proceso de encontrar el hogar o propiedad ideal para nuestros clientes. Con años de experiencia en el mercado inmobiliario, ofrecemos un servicio personalizado y de calidad para satisfacer todas sus necesidades.</p>
+            <p>Nuestro equipo de profesionales está altamente capacitado para brindarle la mejor asesoría y acompañamiento durante todo el proceso de compra, venta o renta de su propiedad.</p>
+        </section>
+        
+      <section id="departamentos-renta">
+        <h2>Departamentos en Renta</h2>
+          <p>Contamos con una amplia variedad de departamentos en renta en las mejores ubicaciones de la ciudad. Desde estudios hasta departamentos familiares de 3 habitaciones, todos con excelentes amenidades y precios competitivos.</p>
+            <p><img src="img/depa1.jpg" width="293" height="220"></p>
+        </section>
+        
+      <section id="departamentos-venta">
+        <h2>Departamentos en Venta</h2>
+          <p>Ofrecemos departamentos en venta en diferentes zonas, adaptados a todos los presupuestos y necesidades. Nuestras propiedades cuentan con acabados de primera y están ubicadas en zonas con alta plusvalía.</p>
+          <p><img src="img/depa2.jpg" width="330" height="220"></p>
+            <p>&nbsp;</p>
+        </section>
+        
+      <section id="casas-renta">
+        <h2>Casas en Renta</h2>
+          <p>Disponemos de casas en renta con diversas distribuciones y tamaños. Ideales para familias que buscan espacios amplios y confortables en zonas residenciales tranquilas y seguras.</p>
+            <p><img src="img/casa1.jpg" width="331" height="220"></p>
+        </section>
+        
+      <section id="casas-venta">
+        <h2>Casas en Venta</h2>
+          <p>Encuentre la casa de sus sueños entre nuestra selección de propiedades en venta. Desde casas tradicionales hasta modernas residencias con diseños innovadores, tenemos la opción perfecta para usted.</p>
+            <p><img src="img/casa2.jpg" width="331" height="220"></p>
+        </section>
+        
+      <section id="bodegas">
+        <h2>Bodegas</h2>
+          <p>Contamos con bodegas de diferentes tamaños para almacenamiento o uso industrial. Ubicadas en zonas estratégicas con fácil acceso a vías principales.</p>
+            <p><img src="img/bodega.jpg" width="420" height="220"></p>
+        </section>
+        
+      <section id="fincas">
+        <h2>Fincas</h2>
+          <p>Si busca un espacio alejado de la ciudad, nuestras fincas son la opción ideal. Terrenos amplios con hermosos paisajes, perfectos para descanso o proyectos turísticos.</p>
+            <p><img src="img/finca.jpg" width="338" height="220"></p>
+        </section>
+        
+      <section id="locales">
+        <h2>Locales</h2>
+          <p>Ofrecemos locales comerciales en las zonas más transitadas y comerciales de la ciudad. Ideales para establecer su negocio con alta afluencia de clientes potenciales.</p>
+            <p><img src="img/local.jpg" width="290" height="220"></p>
+        </section>
+        
+      <section id="otros">
+        <h2>Otros</h2>
+          <p>También manejamos otro tipo de propiedades como terrenos, oficinas y más. Consúltenos sobre sus necesidades específicas y encontraremos la mejor opción para usted.</p>
+            <p><img src="img/terreno.jpg" width="392" height="220"></p>
+        </section>
+        
+        <section id="contacto">
+            <h2>Contáctanos</h2>
+            <p>Estamos a su disposición para responder cualquier duda o solicitud. Puede contactarnos a través de nuestras redes sociales o directamente por teléfono.</p>
+            <p>Teléfono: (123) 456-7890</p>
+            <p>Email: info@sendahogar.com</p>
+            <p>Dirección: Av. Principal #123, Ciudad</p>
+        </section>
+    </main>
+    
+    <!-- Publicidad derecha -->
+    <aside id="publicidad">
+      <h3>Promociones</h3>
+Oferta Especial
+      Nuevo Desarrollo
+        
+        <div class="redes-sociales">
+          <p><img src="img/ofe1.jpg" width="206" height="187"></p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+        </div>
+        
+        <div class="contacto">
+            <h3>Contáctanos</h3>
+            <p>(123) 456-7890</p>
+        </div>
+    </aside>
+    
+    <footer>
+        © 2025 SENDA HOGAR - Todos los derechos reservados
+    </footer>
+</body>
+</html>
